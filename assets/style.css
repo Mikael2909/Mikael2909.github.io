@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap'); 
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+   
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.menu{
+    filter: invert(1);
+    display: none;
+}
+body{
+    overflow-x: hidden;
+    min-height: 200vh;
+}
+header nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+}
+nav ul li a:hover{
+    border-bottom: 2px solid red;
+}
+header nav .logo{
+    float: left;
+}
+nav.ubah{
+    background-color: black;
+}
+header nav .logo img{
+    height: 60px;
+}
+header nav ul{
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li{
+    list-style: none;
+}
+header nav ul li a{
+    line-height: 60px;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.jumbotron{
+    background: url(../images/wave.png);
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    line-height: 80px;
+    font-size: 1.2em;
+    color: white;
+}
+main .about{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2em;
+    line-height: 30px;
+    color: #505050;
+}
+main .about h1{
+   padding-bottom: 20px;
+}
+.produk{
+    
+    width: 100%;
+    margin: 100px auto;
+}
+.produk h1{
+    text-align: center;
+    line-height: 10vh;
+    color: #505050;
+}
+.bungkuscard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   align-items:  center;
+   width: 100%;
+   margin: 20px;
+   
+   padding-bottom: 50px;
+}
+.card{
+background-color: #2962ff;
+color: #fffdfd;
+height: 350px;
+width: 300px;
+display: flex;
+flex-direction: column;
+align-items: center;
+box-shadow: 26px 20px 14px -1px rgba(0,0,0,0.49);
+border-radius: 20px;
+}
+.card a{
+    background-color: #FFFBFE;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: #5D31FF;
+}
+.card a:hover{
+    background-color: #3b06fc;
+    color: #FFFBFE;
+}
+main .isi{
+    visibility: hidden;
+    opacity: 0;
+    transition: 2s;
+}
+main .isi.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 2s;
+}
+main .produk .card img{
+    width: 40%;
+}
+.founder h3{
+    color: #505050;
+    font-size: 2em;
+    line-height: 100px;
+    text-align: center;
+}
+.founder aside{
+    background-color: #2962ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: #fffdfd;
+    width: 67%;
+    border-radius: 100%;
+    box-shadow: 26px 20px 14px -1px rgba(0,0,0,0.49);
+    }
+.founder img{
+    width: 10%;
+    border-radius: 100%;
+}
+footer{
+    text-align: center;
+    height:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 8px auto;
+    align-items: center;
+    width: 100%;
+    color: #FFFBFE;
+    background-color: #2962ff;
+}
+/* ukuran android */
+@media (max-width:768px){
+    .menu{
+        filter: invert(0);
+       display: block;   
+        float:right;
+        cursor: pointer;
+    }
+    .logo img{
+        float: left;
+    }
+    header nav ul{
+        display:flex;
+        flex-direction: column;
+        background-color: red;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 200;
+        transform: translateX(-500px);
+        height: 450px;
+        padding: 10px 100px;
+        transition: 0.6s;
+    }
+    nav ul.active{
+        transform: translateX(0px);
+    }
+    
+    header nav{
+        width: 100%;
+        height: 70px;
+        padding: 5px 20px;
+        box-sizing: border-box;
+    }
+    .bungkuscard{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+       align-items:  center;
+       width: 70%;
+       margin: 50px;
+       padding-bottom: 50px;
+    }
+    .card{
+        height: 350px;
+        width: 300px;
+        border-radius: 20px;
+        margin: 30px;     
+    }
+    .founder h3{
+        line-height: 40px;
+        margin-top: -20px;
+    }
+    .founder aside{
+        width: 100%;
+        }
+    
+}
